@@ -79,10 +79,8 @@ def func_interactive_1dmixture(pm=0, pv=1, qm1=0, qv1=1, qm2=1, qv2=1):
             obj = func_fssd_power_criterion(p, Xs, k, v[np.newaxis, :])
             objs[i] = obj
         return objs
-
-
-print('p = 0.5*N(0, 1) + 0.5*N({}, {})'.format(pm, pv))
-print('q = 0.5*N({}, {}) + 0.5*N({}, {})'.format(qm1, qv1, qm2, qv2))
+    print('p = 0.5*N(0, 1) + 0.5*N({}, {})'.format(pm, pv))
+    print('q = 0.5*N({}, {}) + 0.5*N({}, {})'.format(qm1, qv1, qm2, qv2))
 
 
 # Assume two dimensions.
