@@ -129,10 +129,11 @@ opts = {
     'max_iter': 50, # maximum number of gradient ascent iterations
     'tol_fun':1e-4, # termination tolerance of the objective
 }
-
 # make sure to give tr (NOT te).
 # do the optimization with the options in opts.
 V_opt, gw_opt, opt_info = gof.GaussFSSD.optimize_auto_init(p, tr, J, **opts)
+
+print(opt_info)
 
 # alpha = significance level of the test
 alpha = 0.01
@@ -140,5 +141,5 @@ fssd_opt = gof.GaussFSSD(p, gw_opt, V_opt, alpha)
 
 # return a dictionary of testing results
 test_result = fssd_opt.perform_test(te)
-print(test_result)
+print(f"Score: {test_result['test_stat']}")
 
