@@ -47,7 +47,7 @@ install:
 #  - pip3 install -r requirements.txt
   - pip3 install --upgrade setuptools wheel
   - pip3 install .
-script:
+#script:
 #  - travis_wait 80 python3 example.py || travis_wait 80 python example.py
 
 after_success:
