@@ -105,8 +105,8 @@ p = density.from_log_den(d, isogauss_log_den)
 m = 1
 
 # Draw n points from q
-seed = 5
-np.random.seed(seed)
+#seed = 5
+#np.random.seed(seed)
 n = 300
 X = np.random.randn(n, 2) + np.array([m, 0])
 
